@@ -1,0 +1,16 @@
+.header {
+    padding: 2rem 0;
+    line-height: 1.5rem;
+  }
+  
+  .header-title {
+    font-size: 8rem;
+    letter-spacing: 1rem;
+    margin: 3rem;
+    line-height: 1rem;
+    color: var(--gray-clr);
+    text-align: center;
+    opacity: 0.8;
+    font-style: italic;
+    text-shadow: 0 1.1rem 1rem var(--border-clr);
+  }
