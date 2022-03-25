@@ -1,0 +1,107 @@
+.todo {
+    width: 40rem;
+    height: 5rem;
+    border: 1px solid var(--gray-clr);
+    background-color: var(--bg-secondary);
+    color: var(--white-clr);
+    border-radius: 1rem;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+  }
+  
+  .todo__info {
+    width: 80%;
+  }
+  
+  /* ___________________________Start Checkbox____________________ */
+  
+  .todo__checkbox {
+    display: block;
+    position: relative;
+    padding-left: 3.5rem;
+    cursor: pointer;
+    font-size: 2rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Create a custom checkbox */
+  .todo__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--white-clr);
+    opacity: 0.8;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .todo__checkbox:hover input ~ .todo__checkmark {
+    background-color: var(--gray-clr);
+  }
+  
+  /* When the checkbox is checked, add a purple background */
+  .todo__checkbox input:checked ~ .todo__checkmark {
+    background-color: var(--border-clr);
+  }
+  
+  /* Create the todo__checkmark/indicator (hidden when not checked) */
+  .todo__checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the todo__checkmark when checked */
+  .todo__checkbox input:checked ~ .todo__checkmark:after {
+    display: block;
+  }
+  
+  /* Style the todo__checkmark/indicator */
+  .todo__checkbox .todo__checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--white-clr);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+  
+  /* Hide the browser's default checkbox */
+  .todo__checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  /* ___________________________Start Checkbox____________________ */
+  
+  .todo__options {
+    display: flex;
+    gap: 0.7rem;
+  }
+  
+  .todo__options img {
+    width: 2.2rem;
+    cursor: pointer;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+  
+  .fall {
+    transform: translateY(10rem) rotateZ(20deg);
+    opacity: 0;
+  }
